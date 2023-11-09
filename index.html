@@ -12,19 +12,19 @@
     <script>
         let clockDisplayElement = document.getElementById("clockDisplay");
         // As soon as the page is rendered, update the clock
-        clockDisplayElement.innerHTML = new Date(Date.now());
+        clockDisplayElement.innerHTML = new Date(Date.now()).toLocaleTimeString("en-US");
 
         // And then, every 1 second after that, update the clock
         setInterval(() => {
             clockDisplayElement.innerHTML = new Date(Date.now()).toLocaleTimeString("en-US");
         }, 1000);
 
-        // // setInterval reloades the element at a set interval
+        //--- setInterval reloades the element at a set interval
         // setInterval(() => {
         //     clockDisplayElement.innerHTML = new Date(Date.now());
         // }, 1000);
         
-        // // this can be modified to be more readable
+        // // Types of dat
         // // .toDateString() =>
         // // .toTimeString() =>
         // // .toLocaleTimeString() =>

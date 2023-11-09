@@ -11,10 +11,11 @@ switch (notificationPermission) {
     case "granted":
         console.log("User has given permission for notifications!")
         setTimeout(() => {
-            new Notification("Example notification", {
+            let newNotification = new Notification("Example notification", {
                 body: "Hey Hey!"
-            })
-        }, 5000);
+            });
+            console.log(newNotification.body)
+        }, 1000);
         break;
     case "denied":
         console.log("User denied access to notifications")
